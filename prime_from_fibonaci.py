@@ -8,7 +8,7 @@ def is_prime(integer):
             continue
         
         return False
-        break
+
     return True
 
 item1 = 1
