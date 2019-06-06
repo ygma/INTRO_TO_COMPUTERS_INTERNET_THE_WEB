@@ -12,10 +12,18 @@
 
 
 
-n = 0
-sum = 0
+#n = 0
+#sum = 0
+#while n <= 100:
+#    sum += n
+#    n += 2
+#    
+#print(sum)
+
+n = 1
 while n <= 100:
-    sum += n
-    n += 2
+    if n % 2 == 1:
+        print(n)
     
-print(sum)
+    n += 1
+    
