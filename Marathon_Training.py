@@ -1,15 +1,18 @@
 def get_seconds(minutes):
     return minutes * 60
 
-def get_speed_mile_per_second(total_second):
-    return 1 / total_second
+def get_speed_mile_per_second(total_seconds):
+    return 1 / total_seconds
 
-minutes = int(input('minutes: '))
-seconds = int(input('seconds: '))
+def get_total_seconds(minutes, seconds):
+    return get_seconds(minutes) + seconds
 
-#minutes = 9
-#seconds = 14
-#miles = 5
+#minutes = int(input('minutes: '))
+#seconds = int(input('seconds: '))
+
+minutes = 9
+seconds = 14
+miles = 5
 
 #minutes = 8
 #seconds = 0
@@ -23,7 +26,7 @@ seconds = int(input('seconds: '))
 #seconds = 25
 #miles = 1
 
-total_second = get_seconds(minutes) + seconds
+total_second = get_total_seconds(minutes, seconds)
 #print('time in seconds is ' + str(total_second))
 
 speed_mile_per_second = get_speed_mile_per_second(total_second)
@@ -31,7 +34,7 @@ speed_mile_per_second = get_speed_mile_per_second(total_second)
 mph = speed_mile_per_second * 3600
 print('Your speed is ' + str(mph) + ' mph')
 
-miles = int(input('miles:'))
+#miles = int(input('miles:'))
 elapsed_total_seconds = miles / speed_mile_per_second
 elapsed_minite = int(elapsed_total_seconds // 60)
 elapsed_seconds = int(elapsed_total_seconds % 60)
